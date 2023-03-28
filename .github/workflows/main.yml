@@ -23,13 +23,13 @@ jobs:
           dotnet-version: '6.0.x'
           
       - name: Restore
-        run: dotnet restore ./TestDeploy.sln
+        run: dotnet restore ./HackBackend.sln
         
       - name: Build
-        run: dotnet build ./TestDeploy.sln --configuration Release --no-restore
+        run: dotnet build ./HackBackend.sln --configuration Release --no-restore
         
       - name: Publish
-        run: dotnet publish ./TestDeploy.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
+        run: dotnet publish ./HackBackend.sln --configuration Release --no-build --output '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
         
       - name: Deployment
         uses: azure/webapps-deploy@v2
