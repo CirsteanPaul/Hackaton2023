@@ -1,7 +1,6 @@
-﻿using HackBackend.Services.Services.Common;
-using Microsoft.AspNetCore.Authentication;
+﻿using HackBackend.Services.Services.Common.Auth;
 using Microsoft.Extensions.DependencyInjection;
-using System;
+
 namespace HackBackend.Services
 {
     public static class DependencyMapper

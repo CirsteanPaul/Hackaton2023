@@ -1,11 +1,10 @@
-﻿using HackBackend.Services.Services.Common;
+﻿using HackBackend.Services.Services.Common.Auth;
 using HackBackend.Web.Models.Common;
 using HackBackend.Web.Models.Requests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Rent.WebApi.Models.Authentication;
-using System;
 
 namespace HackBackend.Web.Controllers
 {
