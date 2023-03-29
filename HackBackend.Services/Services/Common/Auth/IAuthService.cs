@@ -5,5 +5,6 @@ namespace HackBackend.Services.Services.Common.Auth
     public interface IAuthService
     {
         string LoginUser(string username, string password);
+        void RegisterUser(RegisterDto dto);
     }
 }

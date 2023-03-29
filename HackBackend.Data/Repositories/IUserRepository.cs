@@ -1,9 +1,10 @@
 ﻿using HackBackend.Data.Entities;
+using HackBackend.Data.Infrastructure.Repository;
 
 namespace HackBackend.Data.Repositories
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
-        User GetUserById(string username);
+        User GetUserByUsername(string username);
     }
 }

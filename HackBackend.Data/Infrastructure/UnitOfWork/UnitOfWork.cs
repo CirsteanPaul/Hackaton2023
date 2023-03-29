@@ -15,7 +15,7 @@ namespace HackBackend.Data.Infrastructure.UnitOfWork
             IUserRepository userRepository)
         {
             this.context = context;
-            Users = userRepository;
+            this.Users = userRepository;
         }
 
         #region Repositories

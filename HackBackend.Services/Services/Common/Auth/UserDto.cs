@@ -1,6 +1,6 @@
-﻿namespace HackBackend.Data.Entities
+﻿namespace HackBackend.Services.Services.Common.Auth
 {
-    public sealed class User
+    public sealed class UserDto
     {
         public int Id { get; set; }
         public string Username { get; set; }
