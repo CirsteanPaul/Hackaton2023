@@ -1,4 +1,6 @@
 ﻿using HackBackend.Services.Services.Common.Auth;
+using HackBackend.Web.Mappers;
+using HackBackend.Web.Models.Authentication;
 using HackBackend.Web.Models.Common;
 using HackBackend.Web.Models.Requests;
 using Microsoft.AspNetCore.Authorization;
@@ -28,6 +30,17 @@ namespace HackBackend.Web.Controllers
         {
             var token = authenticationService.LoginUser(login.Username, login.Password);
             return Ok(new LoginResponse(token));
+        }
+
+        [HttpPost("register")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public ActionResult RegisterUser(RegisterRequest registerRequest)
+        {
+            var registerDto = registerRequest.ToDto();
+            authenticationService.RegisterUser(registerDto);
+
+            return StatusCode(201);
         }
     }
 }

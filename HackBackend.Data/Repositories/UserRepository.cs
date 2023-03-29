@@ -15,7 +15,7 @@ namespace HackBackend.Data.Repositories
             this.dbContext = dbContext;
         }
 
-        public User GetUserById(string username)
+        public User GetUserByUsername(string username)
         {
             return dbContext.Users
                 .FirstOrDefault(u => u.Username == username);
